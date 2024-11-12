@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cstring>
-#include <media.h>
+#include "media.h"
 
 using namespace std;
 
@@ -36,7 +36,7 @@ int Media:: getYear(){ //returns the year
   return year;
 }
 
-void Media::printMedia(){ //prints the medial details (title and year)
+void Media::printMedia(){ //prints the medial details (title and year) : ::artis
   cout << "Title: " << title << endl;
   cout << "Year: " << year << endl;
 }

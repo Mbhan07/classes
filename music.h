@@ -25,7 +25,7 @@ class Music: public Media{
   ~Music();
   char * getArtist();
   char * getPublisher();
-  char * getDuration();
+  int getDuration();
   virtual void printMedia();
     
 

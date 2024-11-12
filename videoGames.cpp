@@ -13,7 +13,7 @@ using namespace std;
 //same as before, just modified for specific alsss
 videoGames::videoGames(char * title, char * newpublisher, int year, int newrating):Media(title, year){
   publisher = new char[100];
-  strcpy(publisher, new publisher);
+  strcpy(publisher, newpublisher);
   rating = newrating;
   
 }
@@ -43,3 +43,7 @@ void videoGames::printMedia(){
   cout << "Publisher: " << publisher << endl;
   cout << "Rating: " << rating << endl;
 }
+
+//
+
+

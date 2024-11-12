@@ -1,8 +1,9 @@
 #include <iostream>
+#include "videoGames.h"
 #include <cstring>
 #include "media.h" // header files in quotes
-#include "videoGames.h"
 #include "music.h"
+#include "movies.h"
 #include <vector>
 #include <bits/stdc++.h>
 
@@ -180,7 +181,7 @@ void addVideoGames(vector<Media*>&mediaTypes){
   cin >> rating;
 
   // Create a new VideoGames object and add it to the mediaTypes vector
-  videoGames * newvideoGame = new videoGames(title, publisher, year, rating);
+  videoGames* newvideoGame = new videoGames(title, publisher, year, rating);
 
   //store it
   mediaTypes.push_back(newvideoGame);
@@ -205,7 +206,7 @@ void addMovie(vector<Media*>&mediaTypes){
   cin.getline(title, 100, '\n');
 
   cout << "What is the name of the director: ";
-  cin.getline(publisher,100,'\n');
+  cin.getline(director,100,'\n');
 
   cout << "What year was the movie made: ";
   cin >> year;

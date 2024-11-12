@@ -29,10 +29,11 @@ class movies : public Media{
   ~movies();
   //a desctructor is a special function that runs when an object is deleted to clean up/free resources
   virtual char * getDirector();
-  virtual int * getRating();
-  virtual int * getDuration();
+  virtual int  getRating();
+  virtual int  getDuration();
   virtual void printMedia();
   
 };
 
+//
 #endif

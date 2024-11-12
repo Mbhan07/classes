@@ -13,8 +13,8 @@ using namespace std;
 
 movies::movies(){  //initialize director and set duration/rating equal to 0
   director = new char[100];
-  duration = 0
-  rating = 0
+  duration = 0;
+  rating = 0;
 
 }
 
@@ -50,7 +50,7 @@ int movies::getDuration(){
 //prints all details of movie (director, duration, rating)
 void movies::printMedia(){
   cout << "Movies: " << endl;
-  Media::printMedia(); //accessing title and year from media parent class
+  Media::printMedia(); //accessing title and year from media parent classend
   cout <<"Director: " << director << endl;
   cout << "Duration: " << duration << endl;
   cout << "Rating: " << rating << endl;

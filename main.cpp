@@ -36,7 +36,7 @@ using namespace std;
 //these functions first narrow down whether a user wants to modify a movie, music, or video game
 
 void movie(vector<Media*>&mediaTypes);
-void videoGames(vector<Media*>&mediaTypes);
+void PickVideoGames(vector<Media*>&mediaTypes);
 void music(vector<Media*>&mediaTypes);
 
 //all of the methods used to add media into the music, videogame, or movie category
@@ -79,7 +79,7 @@ int main(){
       movie(mediaTypes);
 
     }else if(strcmp(mediaType, "VIDEOGAMES") == 0){
-      videoGames(mediaTypes);
+      PickVideoGames(mediaTypes);
       
     }else if(strcmp(mediaType, "MUSIC") == 0){
       music(mediaTypes);
@@ -107,10 +107,10 @@ void movie(vector <Media*> & mediaTypes){
   if(strcmp(input, "ADD") == 0){
     addMovie(mediaTypes);
     
-  }else if(strcmp(input, "DELETE") == 0){
+  }else if(strcmp(input, "SEARCH") == 0){
     searchMedia(mediaTypes); //using the same function for all media types bc i'm lazy
 
-  }else if(strcmp(input, "SEARCH") == 0){
+  }else if(strcmp(input, "DELETE") == 0){
     deleteMedia(mediaTypes);
 
   }else if(strcmp(input, "QUIT") == 0){
@@ -119,13 +119,12 @@ void movie(vector <Media*> & mediaTypes){
 }
 
 //method to handle anything videogame related
-void videoGames(vector <Media*>& mediaTypes){
+void PickVideoGames(vector <Media*>& mediaTypes){
   char barackObama[100];
   cout << "Do you want to ADD, DELETE, SEARCH or QUIT" << endl;
   cin >> barackObama;
 
   //check what user input matches and call the appropiate function
-
   if(strcmp(barackObama, "ADD") == 0){
     addVideoGames(mediaTypes);
   }else if(strcmp(barackObama, "DELETE") == 0){
@@ -185,7 +184,6 @@ void addVideoGames(vector<Media*>&mediaTypes){
 
   //store it
   mediaTypes.push_back(newvideoGame);
-    
 }
 
 
